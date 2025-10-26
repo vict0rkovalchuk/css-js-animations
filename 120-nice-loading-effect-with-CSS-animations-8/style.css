@@ -1,0 +1,55 @@
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0a3d62;
+}
+
+.loader {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.loader span {
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+.loader span:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: #fff;
+  animation: loading 1s linear infinite;
+}
+
+.loader span.s4:before,
+.loader span.s5:before,
+.loader span.s6:before {
+  animation-delay: 0.1s;
+}
+
+.loader span.s7:before,
+.loader span.s8:before,
+.loader span.s9:before {
+  animation-delay: 0.2s;
+}
+
+@keyframes loading {
+  0% {
+    width: 100%;
+    height: 100%;
+  }
+
+  100% {
+    width: 0px;
+    height: 0;
+  }
+}
