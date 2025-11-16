@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #111;
+}
+
+section .text {
+    font-size: 3em;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.text span {
+    position: relative;
+    display: inline-block;
+    animation: wave 3s ease-in-out infinite;
+    animation-delay: calc(var(--i) * 0.07s);
+}
+
+@keyframes wave {
+    0% {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translateY(-100px);
+    }
+    50%, 100% {
+        transform: translateY(0px);
+    }
+}
